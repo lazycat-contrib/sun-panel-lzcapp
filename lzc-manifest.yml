@@ -1,0 +1,20 @@
+application:
+  subdomain: sun-panel
+  background_task: true
+  multi_instance: false
+  upstreams:
+    - location: /
+      backend: http://sun-panel:3002/
+services:
+  sun-panel:
+    # upstream: docker.io/hslr/sun-panel:1.8.1
+    image: docker.1ms.run/hslr/sun-panel:1.8.1
+    binds:
+      - /lzcapp/var/conf:/app/conf
+usage: |
+  默认账号：admin@sun.cc
+  默认密码：12345678
+  首次登录后请立即修改默认密码。保留手动登录，不注入文件选择器。
+  /app/conf 为配置、数据库和上传文件的合并目录，已持久化至 /lzcapp/var/conf。
+  已挂载宿主机 /var/run/docker.sock 以启用 Docker 管理，请仅向可信用户授权。
+  目标微服需存在此 socket，且允许应用容器访问。Docker 管理操作会影响宿主容器。

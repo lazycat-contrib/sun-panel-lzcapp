@@ -1,0 +1,35 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: sun-panel
+build:
+  toolchains: []
+  run_buildscript: false
+images:
+  - id: sun-panel
+    target: service
+    service: sun-panel
+    source: docker.io/hslr/sun-panel
+    channel: stable
+    sort: semver
+    tag_regex: '^[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Sun-Panel
+    summary: 一个NAS、服务器导航面板、简易docker管理器、Homepage、浏览器首页

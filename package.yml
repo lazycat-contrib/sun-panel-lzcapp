@@ -1,0 +1,14 @@
+package: community.lazycat.app.sun-panel
+version: 1.8.1
+name: Sun-Panel
+description: 一个NAS、服务器导航面板、简易docker管理器、Homepage、浏览器首页
+homepage: https://doc.sun-panel.top/zh_cn/
+author: Sun-Panel Team
+min_os_version: 1.5.0
+locales:
+  zh:
+    name: Sun-Panel
+    description: 一个NAS、服务器导航面板、简易docker管理器、Homepage、浏览器首页
+  en:
+    name: Sun-Panel
+    description: A NAS and server dashboard, simple Docker manager, homepage and browser start page.
