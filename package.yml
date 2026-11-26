@@ -1,5 +1,5 @@
 package: community.lazycat.app.sun-panel
-version: 1.8.1
+version: 2.0.2
 name: Sun-Panel
 description: 一个NAS、服务器导航面板、简易docker管理器、Homepage、浏览器首页
 homepage: https://doc.sun-panel.top/zh_cn/

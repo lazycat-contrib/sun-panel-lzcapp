@@ -7,8 +7,8 @@ application:
       backend: http://sun-panel:3002/
 services:
   sun-panel:
-    # upstream: docker.io/hslr/sun-panel:1.8.1
-    image: docker.1ms.run/hslr/sun-panel:1.8.1
+    # upstream: docker.io/hslr/sun-panel:2.0.2
+    image: docker.1ms.run/hslr/sun-panel:2.0.2
     binds:
       - /lzcapp/var/conf:/app/conf
 usage: |
